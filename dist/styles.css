@@ -142,4 +142,27 @@ button:hover {
 .hero button {
   margin-top: 8px;
 }
+
+.features {
+  background-color: #171e2a;
+}
+
+.features .feature-grid {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 699px) {
+  .features .feature-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.features .feature {
+  border: 1px solid red;
+  min-height: 150px;
+}
 /*# sourceMappingURL=styles.css.map */
