@@ -1,16 +1,41 @@
 .features {
   background-color: $mainBg;
   .feature-grid {
-    // limit the width
+    display: grid;
+    gap:6vw 10vw;
+    grid-template-columns:1fr;
     max-width: 880px;
     margin: 0 auto;
     @include breakpoint(medium) {
-      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint(large) {
+      gap:7vw 7vw;
       grid-template-columns: repeat(2, 1fr);
     }
   }
   .feature {
-    border: 1px solid red;
-    min-height: 150px;
+    text-align: center;
+    &__image{
+        margin-bottom: 1.875rem;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+          height: 100%;
+          width: auto;
+        }
+    }
+    &__title{
+        font-family: $font-title;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    &__description{
+        font-family: $font-body;
+        font-size: 1rem;
+    }
   }
 }

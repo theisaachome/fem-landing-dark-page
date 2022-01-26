@@ -18,6 +18,12 @@ body {
 a {
   color: #fff;
 }
+a,p{
+  font-size: .875rem;
+  @include breakpoint(large){
+    font-size: 1rem;
+  }
+}
 a{
     text-decoration: none;
 }
